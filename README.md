@@ -21,19 +21,25 @@
 # Código
 -
 -
-int LED = 8;
+#define ldr A0  // Define o pino do LDR
+#define led 8   // Define o pino do LED
+int vldr = 0;  // Variável para armazenar a leitura do LDR
+
 void setup() {
-  Serial.begin(9600);
-  pinMode(LED, OUTPUT);
+  pinMode(ldr, INPUT);  // LDR é um sensor, deve ser apenas INPUT
+  pinMode(led, OUTPUT); // LED como saída
+  Serial.begin(9600);   // Inicia a comunicação serial
 }
+
 void loop() {
-  int LDR = analogRead (A0);
-  Serial.println(LDR);
+  vldr = analogRead(ldr); // Lê o valor do LDR
+  
+  if (vldr > 120) {       // Se a leitura for maior que 900 (ambiente claro)
+    digitalWrite(led, LOW);  // Apaga o LED
+  } else {               // Se estiver escuro
+    digitalWrite(led, HIGH); // Acende o LED
+  }
 
-  if(LDR<500)
-   digitalWrite(LED, HIGH);
-   else
-     digitalWrite(LED,LOW);
-
-   delay(500);
+  Serial.println(vldr);  // Exibe o valor lido no monitor serial
+  delay(100);            // Pequena pausa para estabilizar a leitura
 }
