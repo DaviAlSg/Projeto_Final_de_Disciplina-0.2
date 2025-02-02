@@ -10,7 +10,6 @@ o LED acende automaticamente.
  Conecte o anodo do LED à porta digital D9 e o catodo, através de um resistor de 220Ω, ao GND.
  Finalize ligando os pinos de 5V e GND do Arduino à protoboard para alimentar o circuito.
 -
--
 # Materiais
 1 Fotorresistor
 1 Fio de 10 k ohm
