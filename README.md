@@ -1,5 +1,8 @@
 # Projeto_Final_de_Disciplina-0.2
--
+Sobre o projeto:
+Este projeto utiliza um LDR para detectar a intensidade da luz no ambiente.
+Quando o LDR percebe que está claro, o LED permanece apagado. Se o ambiente escurece,
+o LED acende automaticamente.
 -
 ![Editing Components (5)](https://github.com/user-attachments/assets/d251a4d8-96d5-4a81-b2b7-9fc3378847a8)
 
