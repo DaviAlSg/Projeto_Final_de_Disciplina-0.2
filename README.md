@@ -17,7 +17,6 @@ o LED acende automaticamente.
 1 fio de 220 k ohm
 1 Led
 1 Protobord
--
 # Código
 #define ldr A0  // Define o pino do LDR 
 #define led 8   // Define o pino do LED
